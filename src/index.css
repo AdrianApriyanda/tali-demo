@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { -webkit-tap-highlight-color: transparent; box-sizing: border-box; }
+  body { @apply bg-tali-bg text-tali-text antialiased overflow-x-hidden; }
+}
+
+@layer components {
+  .glass { @apply backdrop-blur-xl bg-white/70 border border-white/40 shadow-lg; }
+  .btn-primary { @apply bg-tali-accent text-white font-semibold rounded-2xl py-3.5 px-5 transition-all duration-200 active:scale-[0.97] hover:shadow-md disabled:opacity-60; }
+  .btn-secondary { @apply bg-tali-accentLight text-tali-accent font-medium rounded-2xl py-3.5 px-5 border border-tali-accent/30 transition-all duration-200 active:scale-[0.97]; }
+  .card { @apply bg-tali-card rounded-3xl border border-tali-border/50 shadow-sm overflow-hidden transition-all duration-300; }
+  .chip { @apply inline-flex items-center gap-1.5 bg-tali-accentLight text-tali-accent border border-tali-accent/20 rounded-full px-3 py-1 text-xs font-bold tracking-wide; }
+}
+.hide-scroll::-webkit-scrollbar { display: none; }
+.hide-scroll { -ms-overflow-style: none; scrollbar-width: none; }
